@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexurat Cars</title>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/pages/index.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="top-img">
+      <header class="flex">
+        <div class="logo">
+          <a href="#">
+            <img src="images/logo.png" alt="FZ AutoHub Logo" />
+          </a>
+        </div>
+        <nav class="links">
+          <a href="#">Home</a>
+          <a href="#" id="about-link">About</a>
+          <a href="#contact" class="btn">Contact Us</a>
+          <a href="/pages/signin.html" class="sign-in">
+            <i class="fa-solid fa-right-to-bracket"></i> Sign In
+          </a>
+          <a href="/pages/register.html" class="register">
+            <i class="fa-solid fa-user-plus"></i> Register
+          </a>
+        </nav>
+      </header>
+
+      <section class="content">
+        <div class="content-box">
+          <h2 class="main-title">Welcome to FZ AutoHub</h2>
+          <p class="subtitle">Explore the World’s Most Unique Cars</p>
+          <p class="offer">
+            FEATURING: <span>The 6 Most Unique Cars on Earth</span>
+          </p>
+          <p class="shipping">
+            Embark on a journey through our exclusive collection of the world's rarest and most powerful cars.
+          </p>
+          <a href="#recommended" class="start-exploring">
+            <button class="cta-btn" onclick="scrollToSection('#recommended')">Explore Our Cars</button>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Modal -->
+
+
+    <div id="about-modal" class="modal">
+      <div class="modal-content">
+        <span id="close" class="close-btn">&times;</span>
+        <h2>About Us</h2>
+        <p>
+          Welcome to FZ AutoHub! Discover the most unique cars in the world with us.
+          Explore timeless classics and modern marvels all in one place.
+        </p>
+        <p>Stay tuned for exciting new features!</p>
+        <!-- Added small centered text at the bottom -->
+        <p class="small-text">By Fedi Zorai</p>
+      </div>
+    </div>
+    
+
+
+        
+<style>
+ 
+
+ /* General Body Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* About Link Styling */
+#about-link {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.5s ease;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 8px;
+  width: 60%;
+  max-width: 700px;
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.5s ease-out; /* Added smooth effect */
+}
+
+/* Modal Heading */
+.modal-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Modal Paragraphs */
+.modal-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* Small Text for Attribution */
+.small-text {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 30px;
+  font-style: italic;
+  text-align: center; /* Center the small text */
+  opacity: 0; /* Initial opacity for animation */
+  animation: fadeInText 1s ease-in-out 0.5s forwards; /* Smooth fade-in for attribution text */
+}
+
+/* Close Button */
+.close-btn {
+  font-size: 2.5rem;
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Modal Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+    padding: 20px;
+  }
+  #about-link {
+    font-size: 1.1rem;
+  }
+}
+
+
+</style>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Have any questions or feedback? Fill out the form below, and we’ll get back to you shortly!</p>
+        <form action="#" method="post" class="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter the subject" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+    
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1 id="recommended" class="recommended">
+        <i class="fa-solid fa-check"></i> Recommended for you
+      </h1>
+
+      <section class="products" id="product-container">
+        <!-- Product Cards -->
+        <!-- Ferrari 250 GTO -->
+        <article class="card">
+          <a href="/pages/product-details.html">
+            <img class="product-image" src="./images/ferrari-250-gto.jpg" alt="Ferrari 250 GTO (1962)" />
+          </a>
+          <div class="content">
+            <h2 class="title">Ferrari 250 GTO (1962)</h2>
+            <p class="description">
+              The Ferrari 250 GTO is one of the most iconic sports cars ever made. With only 36 units produced, it is a collector's holy grail.
+            </p>
+            <div class="footer">
+              <div class="price">$48,000,000</div>
+            
+            </div>
+          </div>
+        </article>
+
+        <!-- Other product cards (Bugatti, Rolls-Royce, etc.) would go here -->
+        <!-- Product Card 2: Bugatti La Voiture Noire (2019) -->
+<article class="card">
+  <a href="/pages/product-details.html">
+    <img class="product-image" src="./images/bugatti-la-voiture-noire-2019.jpg" alt="Bugatti La Voiture Noire (2019)" />
+  </a>
+
+  <div class="content">
+    <h2 class="title">Bugatti La Voiture Noire (2019)</h2>
+    <p class="description">
+      The Bugatti La Voiture Noire is the most expensive new car ever made, costing $18.68 million. With its 8.0L quad-turbocharged W16 engine, it’s capable of reaching speeds exceeding 260 mph, blending technology, luxury, and performance into an automotive masterpiece.
+    </p>
+
+    <div class="footer">
+      <div class="price">$18,680,000</div>
+    </div>
+  </div>
+</article>
+
+      <!-- Product Card 3: Rolls-Royce Sweptail (2017) -->
+<article class="card">
+  <a href="/pages/product-details.html">
+    <img class="product-image" src="./images/rolls-royce-sweptail-2017.jpg" alt="Rolls-Royce Sweptail (2017)" />
+  </a>
+
+  <div class="content">
+    <h2 class="title">Rolls-Royce Sweptail (2017)</h2>
+    <p class="description">
+      The Rolls-Royce Sweptail is a unique one-off luxury vehicle commissioned by a private client. Crafted by the bespoke team at Rolls-Royce, it combines elegance with advanced engineering, featuring a striking design and luxurious details that reflect the owner’s personal style.
+    </p>
+
+    <div class="footer">
+      <div class="price">$13,000,000</div>
+    </div>
+  </div>
+</article>
+
+  
+     <!-- Product Card 4: Mercedes-Benz 540K Special Roadster (1936) -->
+<article class="card">
+  <a href="/pages/product-details.html">
+    <img class="product-image" src="./images/mercedes-benz-540k-special-roadster-1936.jpg" alt="Mercedes-Benz 540K Special Roadster (1936)" />
+  </a>
+
+  <div class="content">
+    <h2 class="title">Mercedes-Benz 540K Special Roadster (1936)</h2>
+    <p class="description">
+      The Mercedes-Benz 540K Special Roadster (1936) is a true icon of automotive luxury and engineering. Known for its elegance and performance, the 540K boasts a powerful 5.4-liter engine and exquisite design, combining both luxury and speed. It remains one of the most sought-after classics in the world.
+    </p>
+
+    <div class="footer">
+      <div class="price">$9,000,000</div>
+      
+    </div>
+  </div>
+</article>
+
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-info">
+          <p>&copy; Fedi Zorai</p>
+          <p>All Rights Reserved</p>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/fedi.zorai" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/fedi-zorai-5a65a7298/" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Get elements
+const aboutLink = document.getElementById("about-link");
+const modal = document.getElementById("about-modal");
+const closeBtn = document.getElementById("close");
+
+// Open modal when 'About' link is clicked
+aboutLink.onclick = function() {
+  modal.style.display = "block";
+  setTimeout(function() {
+    modal.classList.add("fade-in");
+  }, 10); // Delay to trigger fade-in effect
+}
+
+// Close modal when 'X' (close) button is clicked
+closeBtn.onclick = function() {
+  modal.classList.remove("fade-in");
+  setTimeout(function() {
+    modal.style.display = "none";
+  }, 300); // Wait for animation to finish before hiding
+}
+
+// Close modal if clicked outside of the modal content
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.classList.remove("fade-in");
+    setTimeout(function() {
+      modal.style.display = "none";
+    }, 300);
+  }
+}
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,135 @@
+/* Updated Product Card Styles */
+
+/* Header Styles */
+header.flex {
+  background-color: var(--footer-bg);
+  color: var(--white);
+  padding-block: 0.6rem;
+  transition: background-color 0.3s ease;
+
+  & .fa-solid {
+    color: var(--white);
+  }
+
+  & .logo .fa-solid {
+    font-size: 1.5rem;
+  }
+
+  & .sign-in:hover,
+  & .register:hover {
+    border: 1px solid rgb(152, 154, 189);
+    padding: 0.5rem 1.1rem;
+  }
+
+  & .cart:hover {
+    border: 1px solid rgb(152, 154, 189);
+    padding: 0.5rem 1.1rem 0.5rem 0.7rem;
+  }
+
+  & .logo:hover {
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+  }
+}
+
+/* Product Card Container */
+.card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 320px;
+  border: 2px solid #ff6f61; /* Accent border color */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.product-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-bottom: 2px solid #eee;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+/* Card Content */
+.content {
+  padding: 1rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.description {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Price Styling */
+.price {
+  font-size: 1.5rem;
+  color: #ff6f61;
+  font-weight: bold;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #e65a50;
+  transform: translateY(-3px);
+}
+
+/* Cart Icon */
+.fa-cart-plus {
+  color: var(--white);
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 800px) {
+  .card {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .product-image {
+    margin-inline: auto;
+    width: 260px;
+  }
+
+  .content {
+    margin-top: 2.5rem;
+    margin-bottom: 1.3rem;
+  }
+}
