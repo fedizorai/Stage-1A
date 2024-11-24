@@ -1,5 +1,4 @@
 # FZ AutoHub
-FZ AutoHub is a web application developed as part of our academic project. Built using PHP MVC architecture, HTML, and CSS, the application is supported by a MySQL database and deployed on an Apache server.
 
 🚗 Overview
 
@@ -14,9 +13,3 @@ Diverse Car Collections: Explore a wide range of car brands and models, includin
 Product Details: Get in-depth information about each vehicle, including specs, features, and history.
 Responsive Design: Fully optimized for desktops, tablets, and mobile devices, ensuring a seamless experience on any platform.
 Add to Cart: Simulate adding cars to a cart for a fun, interactive experience (optional if JavaScript is added for interactivity).
-💻 Technologies Used
-
-Backend: PHP (MVC architecture)
-Frontend: HTML, CSS
-Database: MySQL
-Web Server: Apache
